@@ -1,0 +1,39 @@
+#Telechargement de la librairie des graphiques:
+library(ggplot2)
+
+
+
+
+#Visualisation de la table :
+mtcars
+
+
+
+
+#Representation de la puissance :
+boxplot(mtcars$hp)
+
+
+
+#Acceleration en fonction du poids:
+qplot(mtcars$wt,mtcars$qsec,xlab = "weight of car",ylab = "car's acceleration")
+
+
+
+
+
+#Ajout d'une colonne "origine":
+c<-rep(c("US","Japan","Europe"),c(19,7,6))
+mtcars$origine<-c
+mtcars
+
+
+
+
+
+
+#Representation des differents origines:
+pie(table(mtcars$origine))
+
+
+plot(as.factor(mtcars$origine),col="blue")
